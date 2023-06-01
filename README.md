@@ -80,7 +80,7 @@ ORM or object relational mapping is a generic term for a framework that allows a
 
 ## Exercise (5 points possible)
 
-Fork the Replit below, and complete the 5 LINQ exercises.  Add a link to your forked repl here: <YOUR LINK HERE>
+Fork the Replit below, and complete the 5 LINQ exercises.  Add a link to your forked repl here: <https://replit.com/@ElijahParis/Mod2Week4Assessment-6-1-23#main.cs>
 
 [https://replit.com/@launch-team/Mod2Week4Assessment](https://replit.com/@launch-team/Mod2Week4Assessment?v=1)
 
