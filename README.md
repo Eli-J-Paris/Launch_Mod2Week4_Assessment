@@ -7,7 +7,7 @@
 
 ## Questions (8 points possible)
 1. In your own words, how would you define an ORM?
-
+ORM or object relational mapping is a generic term for a framework that allows a developer to create a channel of communication between an application and a database.
 2. Given the two classes for bike and owner, update the classes to include a one-to-many relationship where each bike has one owner, and each owner can have many bikes.
 
     ```C#
@@ -18,6 +18,7 @@
             public int Id { get; set; }
             public string Type { get; set; }
             public DateTime PurchaseDate { get; set; }
+            public Owner BikeOwner {get; set;}
         }
     }
 
@@ -28,6 +29,7 @@
             public int Id { get; set; }
             public string Name { get; set; }
             public int Zipcode { get; set; }
+            public List<Bike> Bikes {get; set;} = new List<Bike>();
         }
     }
     ```
@@ -39,11 +41,15 @@
     ```
     update-database
     ```
+    We would run the add-migration command first. This creates a snapshot of our current migration that can then be "pushed" to our database with the update-database command. By running this command we are finalizing the changes we made in the migration and appling them to the database. If we tried to run update-database first there would be no migration docked that could be applied to the database.
 
 4. For all three parts of this question, imagine that you have used Entity Framework to create a database table using the following class and context. 
     * What will the table name be?
+    The table name will be bikes
     * What will the column name(s) be?
+    The column names will be Id, type and date
     * What is the name of the database you are connecting to?
+    The name of the database will be Bikes
 
     ```C#
     namespace BikeApp
@@ -70,6 +76,7 @@
     <br> a. String 
     <br> b. Integer 
     <br> c. Boolean
+    Contains will return C. a Boolean.
 
 ## Exercise (5 points possible)
 
